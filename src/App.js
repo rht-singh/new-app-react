@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="m-5" style={header_style}>
-          <h1>News App - React</h1>
+          <h1>News App <hr/></h1>
         </div>
 
         <div className="d-flex justify-content-between flex-wrap m-4">
@@ -31,6 +31,7 @@ class App extends Component {
             <NewsItemContainer source={source} key={index} />
           ))}
         </div>
+        <h5>made by:- Rohit </h5>
       </div>
     );
   }

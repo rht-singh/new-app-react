@@ -4,7 +4,7 @@ import _ from "lodash";
 const get_sources = () => {
   return axios
     .get(
-      "https://newsapi.org/v2/sources?language=en&apiKey=" +
+      "https://newsapi.org/v2/sources?language=en&apiKey=8d617e138c08436d96e34609ae62939e" +
         process.env.REACT_APP_NEWS_API_KEY
     )
     .then(res => {
@@ -21,8 +21,7 @@ const get_articles = source => {
     .get(
       "https://newsapi.org/v2/top-headlines?sources=" +
         source +
-        "&apiKey=" +
-        process.env.REACT_APP_NEWS_API_KEY
+        "&apiKey=8d617e138c08436d96e34609ae62939e"
     )
     .then(res => {
       return _.sampleSize(res.data.articles, 5);
